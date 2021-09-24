@@ -1,0 +1,24 @@
+apply plugin: 'com.huawei.ohos.hap'
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\Projects\\Demos\\DemoHarmonyLite\\sign\\keytore.p12')
+            storePassword '00000018D407914A7A743A8EF8E885D0F38744D84DFE45682D471DA5FD8D4EBF539A9EDE4575A06A'
+            keyAlias = 'key0'
+            keyPassword '000000188DF23AB4D4861368BC338AA566B3F5B9281114C4B6BAE5A09494EFA5BE5D0CF4F2932592'
+            signAlg = 'SHA256withECDSA'
+            profile file('D:\\Projects\\Demos\\DemoHarmonyLite\\sign\\ProvisioningProfileLiteHarmonyDebug.p7b')
+            certpath file('D:\\Projects\\Demos\\DemoHarmonyLite\\sign\\LiteHarmonyDemo.cer')
+        }
+    }
+    compileSdkVersion 4
+    defaultConfig {
+        compatibleSdkVersion 3
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+}

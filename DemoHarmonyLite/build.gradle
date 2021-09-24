@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\Projects\\Demos\\DemoHarmonyLite\\sign\\keytore.p12')
+            storePassword '00000018B341A2ABEA8BF8C2F3656AD208C7B16DA9B9F93A5970B1AB9745BE2E28003756021A56A1'
+            keyAlias = 'key0'
+            keyPassword '000000184E5975FD6DBAEB96BF0D0F2A3FD0E550CD8325DBEF782BB52085A7CB66071448A6348CD5'
+            signAlg = 'SHA256withECDSA'
+            profile file('D:\\Projects\\Demos\\DemoHarmonyLite\\sign\\ProvisioningProfileLiteHarmonyDebug.p7b')
+            certpath file('D:\\Projects\\Demos\\DemoHarmonyLite\\sign\\LiteHarmonyDemo.cer')
+        }
+    }
+    compileSdkVersion 4
+    defaultConfig {
+        compatibleSdkVersion 3
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://mirrors.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:2.4.4.2'
+        classpath 'com.huawei.ohos:decctest:1.2.4.0'
+
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://mirrors.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+}

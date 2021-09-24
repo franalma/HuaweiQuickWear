@@ -1,0 +1,14 @@
+<div class="container">
+    {{startReception()}}
+
+    <text class="title">
+        Hello! Nice to meet {{info}}
+    </text>
+
+
+
+    <input type="button" value="Find" onclick="findPhone()" />
+    <input type="button" value="Stop" onclick="foundPhone()" />
+<!--    <input type="button" value="Recv" onclick="starReception()" />-->
+
+</div>
